@@ -6,9 +6,9 @@
   如果需要实现动态的加载模块，则需要在上层实现BaseData和ViewCenter这两个抽象类。
   
   BaseData：
-    界面数据，只有一个字段number是模版编号。如过界面还需要扩展相关的字段请继承它，例如：
-  public class TemplateData extends BaseData {
-
+    界面数据，只有一个字段number是模版编号。如过界面还需要扩展相关的字段请继承它，
+    例如：
+    public class TemplateData extends BaseData {
     private String title;
     private String subTitle;
 
@@ -33,7 +33,8 @@
     }
 }
 
-ViewCenter：这个是通过反射获取模版，例如：
+ViewCenter：这个是通过反射获取模版，
+例如：
   public class ViewDipather extends ViewCenter {
 
     private final String TEMPLATE_HEAD = "TemplateView";  //统一模版的头命名
@@ -79,7 +80,8 @@ ViewCenter：这个是通过反射获取模版，例如：
 }
 
 模版编写规则：
-注意：模版也就是view一定要实现BindData接口，例如：
+注意：模版也就是view一定要实现BindData接口，
+例如：
   public class TemplateViewCOM0001 extends FrameLayout implements BindData<TemplateData> {
 
     TextView title;
